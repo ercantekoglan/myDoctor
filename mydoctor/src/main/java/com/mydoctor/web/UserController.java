@@ -1,15 +1,23 @@
 package com.mydoctor.web;
 
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 
 @Controller
 public class UserController {
 	
-	
+//	@GetMapping("/")
+//	public String welcomeRedirect() {
+//		return "redirect:/index";
+//	}
 	//display index page
 		@GetMapping("/index")
 		public String getIndex(ModelMap model) {
@@ -20,7 +28,20 @@ public class UserController {
 
 		@GetMapping("/register")
 		public String getRegister(ModelMap model) {
-			return "/register";
+//			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//
+//			if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
+//				return "register";
+//			}
+//			return "redirect:/";
+			return "register";
+		}
+	//create new User
+		@PostMapping("/register")
+		@ResponseBody
+		public String postRegister() {
+		//	userService.saveUser(user);
+			return "redirect:/login";
 		}
 	
 	
@@ -44,6 +65,20 @@ public class UserController {
 		public String getProfile(ModelMap model) {
 			return "/profile";
 		}
+	//display Address Information page
+		
+		@GetMapping("/profile/address-information")
+		public String getAddressInformation(ModelMap model) {
+			return "/profile-address";
+		}	
+		
+		//display Password Change page
+		
+		@GetMapping("/profile/change-password")
+		public String getPasswordInformation(ModelMap model) {
+			return "/profile-password";
+		}
+		
 		
 	//display Appointment page
 		
