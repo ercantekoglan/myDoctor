@@ -1,6 +1,5 @@
 package com.mydoctor.domain;
 
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +32,11 @@ public class Doctor {
 	private Address address;
 	private Avatar avatar;
 	private List<Message> messages = new LinkedList<>();
+	private List<Appointment> appointment = new LinkedList<>();
+	
 	private List<School> schools = new LinkedList<>();
+	private List<Patient> patients = new LinkedList<>();
+	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,7 +47,6 @@ public class Doctor {
 	public void setDoctorId(Long doctorId) {
 		this.doctorId = doctorId;
 	}
-	
 
 	@Column(length = 50, nullable = false)
 	public String getName() {
@@ -99,6 +101,7 @@ public class Doctor {
 	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
+
 	@Column(nullable = false)
 	public String getGender() {
 		return gender;
@@ -107,7 +110,9 @@ public class Doctor {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	@OneToOne(mappedBy = "doctor", cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
+
+	@OneToOne(mappedBy = "doctor", fetch = FetchType.LAZY, cascade = { CascadeType.MERGE, CascadeType.PERSIST,
+			CascadeType.REMOVE }, orphanRemoval = true)
 	public Address getAddress() {
 		return address;
 	}
@@ -115,7 +120,9 @@ public class Doctor {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	@OneToOne(mappedBy = "doctor", cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
+
+	@OneToOne(mappedBy = "doctor", fetch = FetchType.LAZY, cascade = { CascadeType.MERGE, CascadeType.PERSIST,
+			CascadeType.REMOVE }, orphanRemoval = true)
 	public Avatar getAvatar() {
 		return avatar;
 	}
@@ -123,7 +130,9 @@ public class Doctor {
 	public void setAvatar(Avatar avatar) {
 		this.avatar = avatar;
 	}
-	@OneToMany(mappedBy = "doctor", fetch = FetchType.LAZY,cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
+
+	@OneToMany(mappedBy = "doctor", fetch = FetchType.LAZY, cascade = { CascadeType.MERGE, CascadeType.PERSIST,
+			CascadeType.REMOVE }, orphanRemoval = true)
 	public List<Message> getMessages() {
 		return messages;
 	}
@@ -132,10 +141,7 @@ public class Doctor {
 		this.messages = messages;
 	}
 
-	@ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST,CascadeType.REMOVE})
-	@JoinTable(name = "doctor_school", 
-			joinColumns = @JoinColumn(name = "doctor_id"),
-			inverseJoinColumns = @JoinColumn(name = "school_id"))
+	@ManyToMany(mappedBy = "doctors")
 	public List<School> getSchools() {
 		return schools;
 	}
@@ -144,13 +150,31 @@ public class Doctor {
 		this.schools = schools;
 	}
 
+	@ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE })
+	@JoinTable(name = "doctor_patient", 
+	joinColumns = @JoinColumn(name = "doctor_id"), 
+	inverseJoinColumns = @JoinColumn(name = "patient_id"))
+	public List<Patient> getPatients() {
+		return patients;
+	}
+
+	public void setPatients(List<Patient> patients) {
+		this.patients = patients;
+	}
+	@OneToMany(mappedBy = "doctor", fetch = FetchType.LAZY,cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
+	public List<Appointment> getAppointment() {
+		return appointment;
+	}
+
+	public void setAppointment(List<Appointment> appointment) {
+		this.appointment = appointment;
+	}
 
 	@Override
 	public int hashCode() {
 		return Objects.hash(doctorId);
 	}
 
-	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {

@@ -5,12 +5,15 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.Table;
 
 @Entity
 public class School {
@@ -65,7 +68,9 @@ public class School {
 		this.graduationDate = graduationDate;
 	}
 
-	@ManyToMany(mappedBy = "schools")
+
+	@ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE })
+	@JoinTable(name = "doctor_school", joinColumns = @JoinColumn(name = "school_id"), inverseJoinColumns = @JoinColumn(name = "doctor_id"))
 	public List<Doctor> getDoctors() {
 		return doctors;
 	}

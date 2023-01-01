@@ -1,6 +1,5 @@
 package com.mydoctor.domain;
 
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +34,11 @@ public class Patient {
 	private Address address;
 	private Avatar avatar;
 	private List<Message> messages = new LinkedList<>();
+	private List<Appointment> appointment = new LinkedList<>();
+	
 	private List<Sickness> sicknesses = new LinkedList<>();
+	private List<Doctor> doctors = new LinkedList<>();
+	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -110,7 +113,7 @@ public class Patient {
 		this.gender = gender;
 	}
 
-	@OneToOne(mappedBy = "patient", cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
+	@OneToOne(mappedBy = "patient", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
 	public Address getAddress() {
 		return address;
 	}
@@ -119,7 +122,7 @@ public class Patient {
 		this.address = address;
 	}
 
-	@OneToOne(mappedBy = "doctor", cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
+	@OneToOne(mappedBy = "doctor", fetch = FetchType.LAZY,cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
 	public Avatar getAvatar() {
 		return avatar;
 	}
@@ -149,6 +152,23 @@ public class Patient {
 
 	public void setSicknesses(List<Sickness> sicknesses) {
 		this.sicknesses = sicknesses;
+	}
+	@ManyToMany(mappedBy = "patients")
+	public List<Doctor> getDoctors() {
+		return doctors;
+	}
+
+	public void setDoctors(List<Doctor> doctors) {
+		this.doctors = doctors;
+	}
+	
+	@OneToMany(mappedBy = "patient", fetch = FetchType.LAZY,cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
+	public List<Appointment> getAppointment() {
+		return appointment;
+	}
+
+	public void setAppointment(List<Appointment> appointment) {
+		this.appointment = appointment;
 	}
 
 	@Override

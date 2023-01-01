@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -72,7 +71,6 @@ public class Address {
 	}
 	
 	@OneToOne
-	@MapsId
 	@JoinColumn(name = "patient_id")
 	public Patient getPatient() {
 		return patient;
@@ -81,7 +79,6 @@ public class Address {
 		this.patient = patient;
 	}
 	@OneToOne
-	@MapsId
 	@JoinColumn(name = "doctor_id")
 	public Doctor getDoctor() {
 		return doctor;
