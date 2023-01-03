@@ -1,18 +1,18 @@
 package com.mydoctor.security;
 
 import org.springframework.security.core.userdetails.UserDetails;
-import com.mydoctor.domain.Patient;
+import com.mydoctor.domain.User;
 
-public class SecurityPatient extends Patient implements UserDetails {
+public class SecurityPatient extends User implements UserDetails {
 	private static final long serialVersionUID = -768590123482494682L;
 
 	
 
-	public SecurityPatient(Patient patient) {
-		this.setAuthorities(patient.getAuthorities());
-		this.setId(patient.getId());
-		this.setPassword(patient.getPassword());
-		this.setUsername(patient.getUsername());
+	public SecurityPatient(User user) {
+		this.setAuthorities(user.getAuthorities());
+		this.setId(user.getId());
+		this.setPassword(user.getPassword());
+		this.setUsername(user.getUsername());
 	}
 
 	@Override

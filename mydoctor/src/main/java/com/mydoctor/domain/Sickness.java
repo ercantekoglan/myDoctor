@@ -18,7 +18,7 @@ public class Sickness {
 	private String illnessSemptoms;
 	private String illnessAdvices;
 	
-	private List<Patient> patients;
+	private List<User> users;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -54,12 +54,12 @@ public class Sickness {
 		this.illnessAdvices = illnessAdvices;
 	}
 	@ManyToMany(mappedBy = "sicknesses")
-	public List<Patient> getPatients() {
-		return patients;
+	public List<User> getPatients() {
+		return users;
 	}
 
-	public void setPatients(List<Patient> patients) {
-		this.patients = patients;
+	public void setPatients(List<User> patients) {
+		this.users = patients;
 	}
 
 	@Override

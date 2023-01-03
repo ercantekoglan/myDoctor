@@ -13,8 +13,7 @@ public class Avatar {
 	
 	private Long id;
 	private String avatarName;
-	private Patient patient;
-	private Doctor doctor;
+	private User user;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,23 +31,13 @@ public class Avatar {
 	}
 	@OneToOne
 	@MapsId
-	@JoinColumn(name = "patient_id")
-	public Patient getPatient() {
-		return patient;
+	@JoinColumn(name = "user_id")
+	public User getUser() {
+		return user;
 	}
-	public void setPatient(Patient patient) {
-		this.patient = patient;
-	}
-	@OneToOne
-	@MapsId
-	@JoinColumn(name = "patient_id")
-	public Doctor getDoctor() {
-		return doctor;
-	}
-	public void setDoctor(Doctor doctor) {
-		this.doctor = doctor;
-	}
-	
+	public void setUser(User user) {
+		this.user = user;
+	}	
 	
 
 }

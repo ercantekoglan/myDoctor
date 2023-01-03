@@ -28,7 +28,7 @@
             <div class="col-xl-6">
               <div class="card-body p-md-5 text-black">
                 <h3 class="mb-5 text-uppercase text-center">Registration Form</h3>
-               <form class="form-signin" action="#" th:action="@{/register}"  method="post">
+               <form class="form-signin" th:action="@{/register}"  method="post">
 					<input id="csrf.token" type="hidden"	th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 						<p id="warning" style="color: red;"></p>
 							<br> 

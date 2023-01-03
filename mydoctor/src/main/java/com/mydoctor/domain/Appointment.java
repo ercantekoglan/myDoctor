@@ -15,8 +15,7 @@ public class Appointment {
 	private Long appointmentId;
 	private String appointmentDate;
 	private String notes;
-	private Doctor doctor;
-	private Patient patient;
+	private User user;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,24 +43,14 @@ public class Appointment {
 		this.notes = notes;
 	}
 	@ManyToOne
-	@JoinColumn(name = "patient_id")
-	public Patient getPatient() {
-		return patient;
+	@JoinColumn(name = "user_id")
+	public User getUser() {
+		return user;
 	}
 
-	public void setPatient(Patient patient) {
-		this.patient = patient;
+	public void setUser(User user) {
+		this.user = user;
 	}
-	@ManyToOne
-	@JoinColumn(name = "doctor_id")
-	public Doctor getDoctor() {
-		return doctor;
-	}
-
-	public void setDoctor(Doctor doctor) {
-		this.doctor = doctor;
-	}
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(appointmentId);

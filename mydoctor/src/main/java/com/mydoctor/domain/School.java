@@ -1,19 +1,13 @@
 package com.mydoctor.domain;
 
 import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
+
 import java.util.Objects;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 
 @Entity
 public class School {
@@ -23,8 +17,6 @@ public class School {
 	private String field;
 	private String minorArea;
 	private Date graduationDate;
-
-	private List<Doctor> doctors = new LinkedList<>();
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -66,17 +58,6 @@ public class School {
 
 	public void setGraduationDate(Date graduationDate) {
 		this.graduationDate = graduationDate;
-	}
-
-
-	@ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE })
-	@JoinTable(name = "doctor_school", joinColumns = @JoinColumn(name = "school_id"), inverseJoinColumns = @JoinColumn(name = "doctor_id"))
-	public List<Doctor> getDoctors() {
-		return doctors;
-	}
-
-	public void setDoctors(List<Doctor> doctors) {
-		this.doctors = doctors;
 	}
 
 	@Override

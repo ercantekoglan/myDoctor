@@ -8,7 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
 import javax.persistence.Table;
 
 @Entity
@@ -21,12 +22,11 @@ public class Address {
 	private Integer zipcode;
 	private String city;
 	private String state;
-	
-	private Doctor doctor;
-	private Patient patient;
+
+	private User user;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}
@@ -62,7 +62,7 @@ public class Address {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	@Column(length = 3, nullable = false)
+	@Column( nullable = false)
 	public String getState() {
 		return state;
 	}
@@ -70,22 +70,16 @@ public class Address {
 		this.state = state;
 	}
 	
-	@OneToOne
-	@JoinColumn(name = "patient_id")
-	public Patient getPatient() {
-		return patient;
+	@ManyToOne
+	@MapsId
+	@JoinColumn(name = "user_id")
+	public User getUser() {
+		return user;
 	}
-	public void setPatient(Patient patient) {
-		this.patient = patient;
+	public void setUser(User user) {
+		this.user = user;
 	}
-	@OneToOne
-	@JoinColumn(name = "doctor_id")
-	public Doctor getDoctor() {
-		return doctor;
-	}
-	public void setDoctor(Doctor doctor) {
-		this.doctor = doctor;
-	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);

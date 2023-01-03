@@ -19,8 +19,7 @@ public class Authority implements GrantedAuthority {
 	private static final long serialVersionUID = 3956546022574665163L;
 	private Long id;
 	private String authority;
-	private Patient patient;
-	private Doctor doctor;
+	private User user;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,25 +41,15 @@ public class Authority implements GrantedAuthority {
 	}
 
 	@ManyToOne
-	@JoinColumn(name = "patient_id")
-	public Patient getPatient() {
-		return patient;
+	@JoinColumn(name = "user_id")
+	public User getUser() {
+		return user;
 	}
 
-	public void setPatient(Patient patient) {
-		this.patient = patient;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
-	
-	@ManyToOne
-	@JoinColumn(name = "doctor_id")
-	public Doctor getDoctor() {
-		return doctor;
-	}
-
-	public void setDoctor(Doctor doctor) {
-		this.doctor = doctor;
-	}
 
 	@Override
 	public int hashCode() {

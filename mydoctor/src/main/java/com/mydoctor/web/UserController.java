@@ -1,18 +1,22 @@
 package com.mydoctor.web;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.mydoctor.dto.UserDto;
+import com.mydoctor.service.UsertService;
 
 
 
 @Controller
 public class UserController {
+	
+	@Autowired
+	private UsertService userService;
 	
 	@GetMapping("")
 	public String welcomeRedirect() {
@@ -39,12 +43,9 @@ public class UserController {
 	//create new User
 		@PostMapping("/register")
 		public String postRegister(@RequestBody UserDto userDto) {
-			System.out.println(userDto);
-			System.out.println("asd");
-
-			return "redirect:/index";
+				userService.saveUser(userDto);
+			return "redirect:/login";
 		}
-	
 	
 	//display Login page
 	

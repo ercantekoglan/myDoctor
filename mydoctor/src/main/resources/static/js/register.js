@@ -47,9 +47,8 @@
 	 fetch('http://localhost:8080/register', {
 		method: 'POST',
 		headers: {
-			'Accept': 'application/JSON',
-			'Content-Type': 'multipart/mixed; boundary=gc0p4Jq0M2Yt08jU534c0p',
-			"X-CSRF-TOKEN": "token"
+			'Content-Type': 'application/json',
+			"X-CSRF-TOKEN": token
 		},
 		body: JSON.stringify(user)
 	}) .then((response) => response.json())
