@@ -1,14 +1,20 @@
 package com.app.mydoctor.domain;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -30,10 +36,14 @@ public class User {
 	private LocalDate birthDate;
 	private String gender;
 	
-	private String role;
-	
 	@OneToOne(mappedBy = "user", cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
 	private Address address;
+	
+	@OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
+	@JoinTable(name = "user_role",
+    joinColumns = @JoinColumn(name = "user_id"), 
+    inverseJoinColumns = @JoinColumn(name = "auth_id"))
+	private Set<Authority> authorities = new HashSet<>();
 	
 	@ManyToMany(mappedBy = "users")
 	private List<Sickness> sickness = new LinkedList<>();
@@ -105,8 +115,11 @@ public class User {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	public List<Sickness> getSickness() {
-		return sickness;
+	public Set<Authority> getAuthorities() {
+		return authorities;
+	}
+	public void setAuthorities(Set<Authority> authorities) {
+		this.authorities = authorities;
 	}
 	public void setSickness(List<Sickness> sickness) {
 		this.sickness = sickness;
@@ -123,14 +136,7 @@ public class User {
 	public void setMessages(List<Messages> messages) {
 		this.messages = messages;
 	}
-	
-	
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
-	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(userIdd);

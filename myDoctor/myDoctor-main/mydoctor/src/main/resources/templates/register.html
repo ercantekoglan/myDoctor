@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="Tooplate">
+
+<title>My Doctors</title>
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- Additional CSS Files -->
+<link rel="stylesheet" href="css/fontawesome.css" type="text/css">
+<link rel="stylesheet" href="/css/tooplate-main.css" type="text/css">
+<link rel="stylesheet" href="/css/owl.css" type="text/css">
+
+</head>
+
+<body style="background-image: url('../images/register-bg.jpg'); background-size: cover;opacity: 1;">
+
+	<div class="slides">
+
+		<div class="slide" id="5">
+			<div class="content fourth-content" style="height: 100%">
+				
+				<div class="row ">
+					<div class="col-xl-4"></div>
+					<div class="col-xl-7" style="padding-left: 10%; padding-right: 5%;">
+						<div class="card-body p-md-5 text-black">
+							<h3 class="mb-5 text-uppercase text-center">Registration
+								Form</h3>
+
+			<form class="form-signin" action="#" th:action="@{/register}" th:object="${user}" method="post">
+				<input id="csrf.token" type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" /> 
+							<div class="form-outline mb-4">
+								<input class="form-control form-control-md" id="username"
+									name="username" type="text" placeholder="Username"
+									value="asdsa" th:field="${user.username}"  />
+							</div>
+							<div class="form-outline mb-4">
+								<input class="form-control form-control-md" id="email"
+									name="Email" type="text" placeholder="E-mail" value="asdsa" th:field="${user.email}"  />
+							</div>
+							<div class="form-outline mb-4">
+								<input class="form-control form-control-md" id="password"
+									name="password" type="text" placeholder="Password"
+									value="asdsa" th:field="${user.password}" />
+							</div>
+							<div class="form-outline mb-4">
+								<input class="form-control form-control-md" id="firstName"
+									name="firstName" type="text" placeholder="Name" value="asdsa"  th:field="${user.firstName}" />
+							</div>
+							<div class="form-outline mb-4">
+								<input class="form-control form-control-md" id="lastName"
+									name="lastName" type="text" placeholder="Lastname"
+									value="asdsa" th:field="${user.lastName}" />
+							</div>
+							<div class="row">
+								<div class="col-md-6 mb-4">
+									<div class="form-outline mb-4">
+										<input class="form-control form-control-md" id="phoneNumber"
+											name="phoneNumber" type="text" placeholder="Phone Number"
+											value="asdsa" th:field="${user.phoneNumber}" />
+									</div>
+								</div>
+								<div class="col-md-6 mb-4">
+									<div class="form-outline">
+										<input class="form-control form-control-md" id="dateBirth"
+											placeholder="Birth Date" type="text"
+											onfocus="(this.type='date')" onblur="(this.type='text')" th:field="${user.dateBirth}" >
+									</div>
+								</div>
+							</div>
+
+
+							<div class="form-outline mb-4">
+								<input class="form-control form-control-md" id="addressLine1"
+									name="addressLine1" type="text" placeholder="AddressLine 1"
+									value="asdsa" th:field="${user.addressLine1}" />
+							</div>
+							<div class="form-outline mb-4">
+								<input class="form-control form-control-md" id="addressLine2"
+									name="addressLine2" type="text"
+									placeholder="AddressLine 2 - Optional" value="asdsa" th:field="${user.addressLine2}" />
+							</div>
+							<div class="row">
+								<div class="col-md-4 mb-4">
+									<div class="form-outline mb-4">
+										<input class="form-control form-control-md" id="city"
+											name="city" type="text" placeholder="City" value="asdsa" th:field="${user.city}" />
+									</div>
+								</div>
+								<div class="col-md-4 mb-4">
+									<div class="form-outline mb-4">
+										<input class="form-control form-control-md" id="zipcode"
+											name="zipcode" type="text" placeholder="Zipcode" value=12332 th:field="${user.zipcode}" />
+									</div>
+								</div>
+								<div class="col-md-4 mb-4">
+									<div class="form-outline mb-4">
+										<select class="select form-select w-100 h-100" id="state" th:field="${user.state}" >
+											<option value="1">State</option>
+											<option value="Alabama">Alabama</option>
+											<option value="Alaska">Alaska</option>
+											<option value="Arizona">Arizona</option>
+											<option value="Arkansas">Arkansas</option>
+											<option value="California">California</option>
+											<option value="Colorado">Colorado</option>
+											<option value="Connecticut">Connecticut</option>
+											<option value="Delaware">Delaware</option>
+											<option value="District of Columbia">District of
+												Columbia</option>
+											<option value="Florida">Florida</option>
+											<option value="Georgia">Georgia</option>
+											<option value="Guam">Guam</option>
+											<option value="Hawaii">Hawaii</option>
+											<option value="Idaho">Idaho</option>
+											<option value="Illinois">Illinois</option>
+											<option value="Indiana">Indiana</option>
+											<option value="Iowa">Iowa</option>
+											<option value="Kansas">Kansas</option>
+											<option value="Kentucky">Kentucky</option>
+											<option value="Louisiana">Louisiana</option>
+											<option value="Maine">Maine</option>
+											<option value="Maryland">Maryland</option>
+											<option value="Massachusetts">Massachusetts</option>
+											<option value="Michigan">Michigan</option>
+											<option value="Minnesota">Minnesota</option>
+											<option value="Mississippi">Mississippi</option>
+											<option value="Missouri">Missouri</option>
+											<option value="Montana">Montana</option>
+											<option value="Nebraska">Nebraska</option>
+											<option value="Nevada">Nevada</option>
+											<option value="New Hampshire">New Hampshire</option>
+											<option value="New Jersey">New Jersey</option>
+											<option value="New Mexico">New Mexico</option>
+											<option value="New York">New York</option>
+											<option value="North Carolina">North Carolina</option>
+											<option value="North Dakota">North Dakota</option>
+											<option value="Northern Marianas Islands">Northern
+												Marianas Islands</option>
+											<option value="Ohio">Ohio</option>
+											<option value="Oklahoma">Oklahoma</option>
+											<option value="Oregon">Oregon</option>
+											<option value="Pennsylvania">Pennsylvania</option>
+											<option value="Puerto Rico">Puerto Rico</option>
+											<option value="Rhode Island">Rhode Island</option>
+											<option value="South Carolina">South Carolina</option>
+											<option value="South Dakota">South Dakota</option>
+											<option value="Tennessee">Tennessee</option>
+											<option value="Texas">Texas</option>
+											<option value="Utah">Utah</option>
+											<option value="Vermont">Vermont</option>
+											<option value="Virginia">Virginia</option>
+											<option value="Virgin Islands">Virgin Islands</option>
+											<option value="Washington">Washington</option>
+											<option value="West Virginia">West Virginia</option>
+											<option value="Wisconsin">Wisconsin</option>
+											<option value="Wyoming">Wyoming</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-6 mb-4">
+									<select class="form-select w-100" id="authority"
+										aria-label="Floating label select example" th:field="${user.role}" >
+										<option value = "null" selected>I am a...</option>
+										<option value="Patient">Patient</option>
+										<option value="Doctor">Doctor</option>
+									</select>
+								</div>
+								<div class="col-xl-6 mb-4">
+									<select class="form-select w-100" id="gender"
+										aria-label="Floating label select example" th:field="${user.gender}" >
+										<option value = "Gender" selected>Gender</option>
+										<option value="Male">Male</option>
+										<option value="Female">Female</option>
+										<option value="Other">Other</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="d-flex justify-content-end pt-3">
+								<button type="submit"
+									class="btn btn-outline-primary btn-lg ms-2">Submit form</button>
+							</div>
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Additional Scripts -->
+	<script src="/js/owl.js"></script>
+	<script src="/js/accordations.js"></script>
+	<script src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/register.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			// navigation click actions 
+			$('.scroll-link').on('click', function(event) {
+				event.preventDefault();
+				var sectionID = $(this).attr("data-id");
+				scrollToID('#' + sectionID, 750);
+			});
+			// scroll to top action
+			$('.scroll-top').on('click', function(event) {
+				event.preventDefault();
+				$('html, body').animate({
+					scrollTop : 0
+				}, 'slow');
+			});
+			// mobile nav toggle
+			$('#nav-toggle').on('click', function(event) {
+				event.preventDefault();
+				$('#main-nav').toggleClass("open");
+			});
+		});
+		// scroll function
+		function scrollToID(id, speed) {
+			var offSet = 0;
+			var targetOffset = $(id).offset().top - offSet;
+			var mainNav = $('#main-nav');
+			$('html,body').animate({
+				scrollTop : targetOffset
+			}, speed);
+			if (mainNav.hasClass("open")) {
+				mainNav.css("height", "1px").removeClass("in").addClass(
+						"collapse");
+				mainNav.removeClass("open");
+			}
+		}
+		if (typeof console === "undefined") {
+			console = {
+				log : function() {
+				}
+			};
+		}
+	</script>
+
+</body>
+</html>

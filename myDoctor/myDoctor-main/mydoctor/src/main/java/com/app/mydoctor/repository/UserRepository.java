@@ -10,10 +10,9 @@ import com.app.mydoctor.domain.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
-	
-//	@Query("select u from User u"
-//		      + " left join fetch u.authorities"
-//		      + " where u.username = :username")
-//	User findByUsername(String username);
+	@Query("select u from User u"
+		      + " left join fetch u.authorities"
+		      + " where u.username = :username")
+	User findByUsername(String username);
 
 }

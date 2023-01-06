@@ -1,12 +1,18 @@
 package com.app.mydoctor.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.app.mydoctor.domain.User;
+import com.app.mydoctor.dto.PersonalInfoDto;
 import com.app.mydoctor.dto.UserDto;
 import com.app.mydoctor.service.UserService;
 
@@ -29,46 +35,66 @@ public class UserController {
 			}
 	
 	//display Register page
-
 		@GetMapping("/register")
-		public String getRegister(ModelMap model) {
-//			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-//
-//			if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
-//				return "register";
-//			}
-//			return "redirect:/";
-			return "/register";
+		public String getCreateUser(ModelMap model) {
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+			if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
+				model.put("user", new UserDto());
+				return "register";
+			}
+			
+			return "redirect:/login";
 		}
 	//create new User
 		@PostMapping("/register")
-		public String postRegister(@RequestBody UserDto userDto) {
+		public String postRegister(UserDto userDto) {
 				userService.saveUser(userDto);
-			return "redirect:/index";
+			return "redirect:/login";
 		}
 	
 	//display Login page
 	
 		@GetMapping("/login")
 		public String getLogin(ModelMap model) {
+			// to Prevent Authenticated Users From Accessing Login Page
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+			if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
+				return "login";
+			}
 			return "/login";
+			
+		}
+		
+		@PostMapping("/login")
+		public String postLogin(ModelMap model) {
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+			if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
+				return "/index";
+			}
+			return "/dashboard";
 		}
 	
 	//display Dashboard page
 		
 		@GetMapping("/dashboard")
 		public String getDashboard(ModelMap model) {
+			User loggedInUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			User user = userService.findById(loggedInUser.getUserIdd());
+			model.put("user", user);
 			return "/dashboard";
 		}	
 		
-	//display Profile page
-		
-		@GetMapping("/profile")
-		public String getProfile(ModelMap model) {
-			return "/profile";
+	//update Profile page
+		@PostMapping("/personal")
+		@ResponseBody
+		public String getProfile(@RequestBody PersonalInfoDto personalInfoDto) {
+			User loggedInUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			User user = userService.findById(loggedInUser.getUserIdd());
+			userService.updateUser(user,personalInfoDto);
+			return "/dashboard";
 		}
 	//display Address Information page
-		
+
 		@GetMapping("/profile/address-information")
 		public String getAddressInformation(ModelMap model) {
 			return "/profile-address";

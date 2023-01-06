@@ -1,467 +1,329 @@
 <!DOCTYPE html>
 <html lang="eng" xmlns:th="http://www.thymeleaf.org">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Tooplate">
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="Tooplate">
 
-    <title>My Doctors</title>
+<title>My Doctors</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="css/fontawesome.css" type="text/css">
-    <link rel="stylesheet" href="/css/tooplate-main.css" type="text/css">
-    <link rel="stylesheet" href="/css/owl.css" type="text/css">
+<!-- Additional CSS Files -->
+<link rel="stylesheet" href="css/fontawesome.css" type="text/css">
+<link rel="stylesheet" href="/css/tooplate-main.css" type="text/css">
+<link rel="stylesheet" href="/css/owl.css" type="text/css">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div class="sequence">
-  
-      <div class="seq-preloader">
-        <svg width="39" height="16" viewBox="0 0 39 16" xmlns="http://www.w3.org/2000/svg" class="seq-preload-indicator"><g fill="#F96D38"><path class="seq-preload-circle seq-preload-circle-1" d="M3.999 12.012c2.209 0 3.999-1.791 3.999-3.999s-1.79-3.999-3.999-3.999-3.999 1.791-3.999 3.999 1.79 3.999 3.999 3.999z"/><path class="seq-preload-circle seq-preload-circle-2" d="M15.996 13.468c3.018 0 5.465-2.447 5.465-5.466 0-3.018-2.447-5.465-5.465-5.465-3.019 0-5.466 2.447-5.466 5.465 0 3.019 2.447 5.466 5.466 5.466z"/><path class="seq-preload-circle seq-preload-circle-3" d="M31.322 15.334c4.049 0 7.332-3.282 7.332-7.332 0-4.049-3.282-7.332-7.332-7.332s-7.332 3.283-7.332 7.332c0 4.05 3.283 7.332 7.332 7.332z"/></g></svg>
-      </div>
-                      
-      
-    </div>
-    
-        
-        <nav>
-          <ul>
-            <li><a href="#1"><img src="/images/icon-1.png" alt=""> <em>Homepage</em></a></li>
-            <li><a href="#2"><img src="/images/icon-3.png" alt=""> <em>Departments</em></a></li>
-            <li><a href="#3"><img src="/images/icon-2.png" alt=""> <em>Doctors</em></a></li>
-            <li><a href="#4"><img src="/images/icon-4.png" alt=""> <em>Login</em></a></li>
-            <li><a href="#5"><img src="/images/icon-5.png" alt=""> <em>Register</em></a></li>
-   
-          </ul>
-        </nav>
-                    
-        
-        <div class="slides">
-          <div class="slide" id="1">
-            <div id="slider-wrapper">
-                <div id="image-slider">
-                  <ul>
-                    <li class="active-img">
-                      <div class="slide-caption">
-                        <h6>Care For</h6>
-                        <h2> Yourself<br> and<br>Your Family</h2>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="slide-caption">
-                        <h6>Latest One</h6>
-                        <h2>Tech<br>Meeting</h2>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="slide-caption">
-                        <h6>Your Update</h6>
-                        <h2>Smart<br>Devices</h2>
-                      </div>
-                    </li>                      
-                  </ul>
-                </div>
-                <div id="thumbnail">
-                  <ul>
-				    <li class="active"><img src="/images/thumb-01.png" alt="About Us" /></li>
-                    <li><img src="/images/thumb-02.png" alt="Services" /></li>
-					<li><img src="/images/thumb-03.jpg" alt="Careers" /></li>
-      
-                  </ul>
-                </div>
-              </div>
-        </div>
-          <div class="slide" id="2">
-            <div class="content second-content">
-                <div id='tabs'>
-                  <ul>
-                    <li><a href='#tabs-1'><span class='fa fa-desktop'></span></a></li>
-                    <li><a href='#tabs-2'><span class='fa fa-users'></span></a></li>
-                    <li><a href='#tabs-3'><span class='fa fa-mobile'></span></a></li>
-                  </ul>
-                  <section class='tabs-content'>
-                    <article id='tabs-1'>
-                      <h2>What We Offer?</h2>
-                      <span>Free Bootstrap v4 Theme</span>
-                      <p>Earth is free Bootstrap v4.1.3 HTML Template for you. Feel free to edit and use this website template for any purpose. Please tell your friends about Tooplate website. Follow us on <a href="https://www.facebook.com/tooplate/">Facebook page</a> for latest updates. Thank you.</p>
-                      <p>Aenean non suscipit risus. Nam mattis, ipsum ac aliquet dignissim, eros justo tempor dolor, rutrum feugiat nunc mauris et elit. Mauris sem odio, accumsan vel sem sed, aliquam convallis dui. Aenean et commodo est.</p>
-                    </article>
-                    <article id='tabs-2'>
-                      <h2>What We Do?</h2>
-                      <span>Ut nec metus eros</span>
-                      <p>Nunc ultricies lectus et sem interdum molestie. Donec non sagittis velit. Vivamus vitae dictum metus, id imperdiet diam. Vestibulum elementum urna erat, eu tincidunt nisl pulvinar nec. Nulla a pharetra felis, sit amet placerat felis. Fusce a tincidunt dui.</p>
-                      <p>Quisque blandit purus orci, et cursus ante porttitor in. Curabitur eleifend turpis id diam ultricies hendrerit. Donec et lectus vitae justo porta molestie.</p>
-                    </article>
-                    <article id='tabs-3'>
-                      <h2>Who We Are?</h2>
-                      <span>Etiam tempus ex ut mi</span>
-                      <p>Vivamus dictum odio at enim posuere, et dapibus nunc sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p> 
-                      <p>Integer a egestas tellus, id malesuada velit. Pellentesque tincidunt, libero eu rutrum volutpat, nisi urna mollis felis, sed mollis sem libero at magna.</p>
-                    </article>
-                  </section>
-                </div>
-            </div>
-        </div>
-          <div class="slide" id="3">
-            <div class="content third-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="owl-carousel owl-theme">
-                            <div class="col-md-12">
-                                <div class="featured-item"> 
-                                	<a href=""><img src="images/item-01.jpg" alt=""></a>
-                                    <div class="down-content">
-                                    <h4>Donec non sagittis</h4>
-                                        <h6>$25.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="featured-item">
-                                    <a href=""><img src="images/item-02.jpg" alt=""></a>
-                                    <div class="down-content">
-                                        <h4>Nulla a pharetra</h4>
-                                        <h6>$35.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="featured-item">
-                                    <img src="images/item-03.jpg" alt="">
-                                    <div class="down-content">
-                                        <h4>Aliquam convallis</h4>
-                                        <h6>$45.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="featured-item">
-                                    <img src="images/item-04.jpg" alt="">
-                                    <div class="down-content">
-                                        <h4>Vivamus vitae #4</h4>
-                                        <h6>$55.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="featured-item">
-                                    <img src="images/item-05.jpg" alt="">
-                                    <div class="down-content">
-                                        <h4>Vivamus vitae #6</h4>
-                                        <h6>$65.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="featured-item">
-                                    <img src="images/item-06.jpg" alt="">
-                                    <div class="down-content">
-                                        <h4>Vivamus vitae #8</h4>
-                                        <h6>$75.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="featured-item">
-                                    <img src="/images/item-07.jpg" alt="">
-                                    <div class="down-content">
-                                        <h4>Donec non sagittis</h4>
-                                        <h6>$85.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="featured-item">
-                                    <img src="/images/item-08.jpg" alt="">
-                                    <div class="down-content">
-                                        <h4>Curabitur sed 8</h4>
-                                        <h6>$95.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="featured-item">
-                                    <img src="/images/item-09.jpg" alt="">
-                                    <div class="down-content">
-                                        <h4>Curabitur sed 10</h4>
-                                        <h6>$105.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="featured-item">
-                                    <img src="/images/item-10.jpg" alt="">
-                                    <div class="down-content">
-                                        <h4>Curabitur sed 12</h4>
-                                        <h6>$115.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="featured-item">
-                                    <img src="/images/item-11.jpg" alt="">
-                                    <div class="down-content">
-                                        <h4>Curabitur sed 14</h4>
-                                        <h6>$125.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="featured-item">
-                                    <img src="/images/item-12.jpg" alt="">
-                                    <div class="down-content">
-                                        <h4>Curabitur sed 16</h4>
-                                        <h6>$135.00</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <div class="slide" id="4">
-            <div class="content fifth-content">
+	<div class="sequence">
 
-          <div class="row " >
-            <div class="col-xl-6"></div>
-            <div class="col-xl-6" style="padding-left: 15%; padding-right: 10%; padding-top: 15%;">
-              <div class="card-body p-md-5 text-black">
-                             
-				<form class="form-signin" action="#" th:action="@{/login}" method="post">
-			<!-- use param.error assuming FormLoginConfigurer#failureUrl contains the query parameter error -->
-			<div th:if="${param.error != null}" >
-				<p style="color: #C83616">Invalid Username or Password!</p>
-				<br>
-				<div th:if="${SPRING_SECURITY_LAST_EXCEPTION != null}">
-					Reason: <span th:text="${SPRING_SECURITY_LAST_EXCEPTION.message}"></span>
+		<div class="seq-preloader">
+			<svg width="39" height="16" viewBox="0 0 39 16"
+				xmlns="http://www.w3.org/2000/svg" class="seq-preload-indicator">
+				<g fill="#F96D38">
+				<path class="seq-preload-circle seq-preload-circle-1"
+					d="M3.999 12.012c2.209 0 3.999-1.791 3.999-3.999s-1.79-3.999-3.999-3.999-3.999 1.791-3.999 3.999 1.79 3.999 3.999 3.999z" />
+				<path class="seq-preload-circle seq-preload-circle-2"
+					d="M15.996 13.468c3.018 0 5.465-2.447 5.465-5.466 0-3.018-2.447-5.465-5.465-5.465-3.019 0-5.466 2.447-5.466 5.465 0 3.019 2.447 5.466 5.466 5.466z" />
+				<path class="seq-preload-circle seq-preload-circle-3"
+					d="M31.322 15.334c4.049 0 7.332-3.282 7.332-7.332 0-4.049-3.282-7.332-7.332-7.332s-7.332 3.283-7.332 7.332c0 4.05 3.283 7.332 7.332 7.332z" /></g></svg>
+		</div>
+
+
+	</div>
+
+	<nav>
+
+		<ul>
+			<li><img class="img-fluid" src="/images/logo.png" alt=""></li>
+			<li><a href="#1"><img src="/images/icon-1.png" alt=""><em>Home Page</em></a></li>
+			<li><a href="#2"><img src="/images/icon-3.png" alt=""><em>Departments</em></a></li>
+			<li><a href="#3"><img src="/images/icon-2.png" alt=""><em>Doctors</em></a></li>
+			<li><button type="button" class="btn btn-outline-light " onclick="login()"><img class = "image- fluid mb-2" src="/images/icon-4.png" alt=""><br>Log In</button></li>
+  			<li><button type="button" class="btn btn-outline-light " onclick="goregister()"><img class = "image- fluid mb-2" src="/images/icon-5.png" alt=""><br>Register</button></li>
+
+
+		</ul>
+	</nav>
+
+
+	<div class="slides">
+		<div class="slide" id="1">
+			<div id="slider-wrapper">
+				<div id="image-slider">
+					<ul>
+						<li class="active-img">
+						
+							<div class="slide-caption">
+								<h6>Care For</h6>
+								<h2>
+									Yourself<br> and<br>Your Family
+								</h2>
+
+							</div>
+						</li>
+						<li>
+							<div class="slide-caption">
+								<h6>Latest One</h6>
+								<h2>
+									Tech<br>Meeting
+								</h2>
+							</div>
+						</li>
+						<li>
+							<div class="slide-caption">
+								<h6>Your Update</h6>
+								<h2>
+									Smart<br>Devices
+								</h2>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="thumbnail">
+					<ul>
+						<li class="active"><img src="/images/thumb-01.png"
+							alt="About Us" /></li>
+						<li><img src="/images/thumb-02.png" alt="Services" /></li>
+						<li><img src="/images/thumb-03.jpg" alt="Careers" /></li>
+
+					</ul>
 				</div>
 			</div>
-			<!-- the configured LogoutConfigurer#logoutSuccessUrl is /login?logout and contains the query param logout -->
-			<div th:if="${param.logout != null}">You have been logged out.</div>
-			<div class="form-outline mb-4">
-                      <input class="form-control form-control-md" id="username" name="username" type="text" placeholder="Username" value="username"/> 
-                 </div>
-             	 <div class="form-outline mb-4">
-                      	<input class="form-control form-control-md" id="email" name="Email" type="text" placeholder="E-mail" value="password" /> 
-                 </div>
-			 <div class="d-flex justify-content-end pt-3">
-                  <button type="submit" class="btn btn-outline-primary btn-md ms-2">Sign In</button>
-                </div>
-		</form>
-              </div>
-              	
-            </div>
-          </div>
-        </div>
-      </div>
-        
-        <div class="slide" id="5">
-            <div class="content fourth-content" style = "height:100%">
+		</div>
+		<div class="slide" id="2">
+			<div class="content second-content">
+				<div id='tabs'>
+					<ul>
+						<li><a href='#tabs-1'><span class='fa fa-desktop'></span></a></li>
+						<li><a href='#tabs-2'><span class='fa fa-users'></span></a></li>
+						<li><a href='#tabs-3'><span class='fa fa-mobile'></span></a></li>
+					</ul>
+					<section class='tabs-content'>
+						<article id='tabs-1'>
+							<h2>What We Offer?</h2>
+							<span>Free Bootstrap v4 Theme</span>
+							<p>
+								Earth is free Bootstrap v4.1.3 HTML Template for you. Feel free
+								to edit and use this website template for any purpose. Please
+								tell your friends about Tooplate website. Follow us on <a
+									href="https://www.facebook.com/tooplate/">Facebook page</a> for
+								latest updates. Thank you.
+							</p>
+							<p>Aenean non suscipit risus. Nam mattis, ipsum ac aliquet
+								dignissim, eros justo tempor dolor, rutrum feugiat nunc mauris
+								et elit. Mauris sem odio, accumsan vel sem sed, aliquam
+								convallis dui. Aenean et commodo est.</p>
+						</article>
+						<article id='tabs-2'>
+							<h2>What We Do?</h2>
+							<span>Ut nec metus eros</span>
+							<p>Nunc ultricies lectus et sem interdum molestie. Donec non
+								sagittis velit. Vivamus vitae dictum metus, id imperdiet diam.
+								Vestibulum elementum urna erat, eu tincidunt nisl pulvinar nec.
+								Nulla a pharetra felis, sit amet placerat felis. Fusce a
+								tincidunt dui.</p>
+							<p>Quisque blandit purus orci, et cursus ante porttitor in.
+								Curabitur eleifend turpis id diam ultricies hendrerit. Donec et
+								lectus vitae justo porta molestie.</p>
+						</article>
+						<article id='tabs-3'>
+							<h2>Who We Are?</h2>
+							<span>Etiam tempus ex ut mi</span>
+							<p>Vivamus dictum odio at enim posuere, et dapibus nunc
+								sagittis. Pellentesque habitant morbi tristique senectus et
+								netus et malesuada fames ac turpis egestas.</p>
+							<p>Integer a egestas tellus, id malesuada velit. Pellentesque
+								tincidunt, libero eu rutrum volutpat, nisi urna mollis felis,
+								sed mollis sem libero at magna.</p>
+						</article>
+					</section>
+				</div>
+			</div>
+		</div>
+		<div class="slide" id="3">
+			<div class="content third-content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="owl-carousel owl-theme">
+							<div class="col-md-12">
+								<div class="featured-item">
+									<a href=""><img src="images/item-01.jpg" alt=""></a>
+									<div class="down-content">
+										<h4>Donec non sagittis</h4>
+										<h6>$25.00</h6>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="featured-item">
+									<a href=""><img src="images/item-02.jpg" alt=""></a>
+									<div class="down-content">
+										<h4>Nulla a pharetra</h4>
+										<h6>$35.00</h6>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="featured-item">
+									<img src="images/item-03.jpg" alt="">
+									<div class="down-content">
+										<h4>Aliquam convallis</h4>
+										<h6>$45.00</h6>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="featured-item">
+									<img src="images/item-04.jpg" alt="">
+									<div class="down-content">
+										<h4>Vivamus vitae #4</h4>
+										<h6>$55.00</h6>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="featured-item">
+									<img src="images/item-05.jpg" alt="">
+									<div class="down-content">
+										<h4>Vivamus vitae #6</h4>
+										<h6>$65.00</h6>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="featured-item">
+									<img src="images/item-06.jpg" alt="">
+									<div class="down-content">
+										<h4>Vivamus vitae #8</h4>
+										<h6>$75.00</h6>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="featured-item">
+									<img src="/images/item-07.jpg" alt="">
+									<div class="down-content">
+										<h4>Donec non sagittis</h4>
+										<h6>$85.00</h6>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="featured-item">
+									<img src="/images/item-08.jpg" alt="">
+									<div class="down-content">
+										<h4>Curabitur sed 8</h4>
+										<h6>$95.00</h6>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="featured-item">
+									<img src="/images/item-09.jpg" alt="">
+									<div class="down-content">
+										<h4>Curabitur sed 10</h4>
+										<h6>$105.00</h6>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="featured-item">
+									<img src="/images/item-10.jpg" alt="">
+									<div class="down-content">
+										<h4>Curabitur sed 12</h4>
+										<h6>$115.00</h6>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="featured-item">
+									<img src="/images/item-11.jpg" alt="">
+									<div class="down-content">
+										<h4>Curabitur sed 14</h4>
+										<h6>$125.00</h6>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="featured-item">
+									<img src="/images/item-12.jpg" alt="">
+									<div class="down-content">
+										<h4>Curabitur sed 16</h4>
+										<h6>$135.00</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-          <div class="row " >
-            <div class="col-xl-4"></div>
-            <div class="col-xl-7" style="padding-left: 10%; padding-right: 5%;">
-              <div class="card-body p-md-5 text-black">
-                <h3 class="mb-5 text-uppercase text-center">Registration Form</h3>
-               
-				
-                <div class="form-outline mb-4">
-                      <input class="form-control form-control-md" id="username" name="username" type="text" placeholder="Username" value="asdsa"/> 
-                 </div>
-             	 <div class="form-outline mb-4">
-                      	<input class="form-control form-control-md" id="email" name="Email" type="text" placeholder="E-mail" value="asdsa" /> 
-                 </div>
-                 <div class="form-outline mb-4">
-                      	<input class="form-control form-control-md" id="password" name="password" type="text" placeholder="Password" value="asdsa" /> 
-                 </div>
-                 <div class="form-outline mb-4">
-						<input class="form-control form-control-md" id="firstName" name="firstName" type="text" placeholder="Name" value="asdsa" /> 
-                    </div>
-                 <div class="form-outline mb-4">
-						<input class="form-control form-control-md" id="lastName" name="lastName" type="text" placeholder="Lastname"value="asdsa" /> 
-                </div>
-                 <div class="row">
-                  <div class="col-md-6 mb-4">
-                   <div class="form-outline mb-4">
-                  		<input class="form-control form-control-md" id="phoneNumber" name="phoneNumber" type="text" placeholder="Phone Number"  value="asdsa"/> 
-                </div>
-                  </div>
-                  <div class="col-md-6 mb-4">
-                   <div class="form-outline">
- 						<input class="form-control form-control-md" id="dateBirth" placeholder="Birth Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" >
-               		</div>
-                  </div>
-                </div>
- 				
-              
-                <div class="form-outline mb-4">
-                  		<input class="form-control form-control-md" id="addressLine1" name="addressLine1" type="text" placeholder="AddressLine 1"	value="asdsa"  /> 
-                </div>
-                 <div class="form-outline mb-4">
-                  		<input class="form-control form-control-md" id="addressLine2" name="addressLine2" type="text" placeholder="AddressLine 2 - Optional" value="asdsa" /> 
-                </div>
-  				<div class="row">
-                  <div class="col-md-4 mb-4">
-                     <div class="form-outline mb-4">
-                  		<input class="form-control form-control-md" id="city" name="city" type="text" placeholder="City" value="asdsa" /> 
-               		 </div>
-                  </div>
-                  <div class="col-md-4 mb-4">
-                   <div class="form-outline mb-4">
-                  		<input class="form-control form-control-md" id="zipcode" name="zipcode" type="text" placeholder="Zipcode" value=12332/> 
-               		</div>
-                  </div>
-                   <div class="col-md-4 mb-4">
-                   <div class="form-outline mb-4">
-					<select class="select form-select w-100 h-100"  id="state">
-                      <option value="1">State</option>
-                      <option value="Alabama">Alabama</option>
-						<option value="Alaska">Alaska</option>
-						<option value="Arizona">Arizona</option>
-						<option value="Arkansas">Arkansas</option>
-						<option value="California">California</option>
-						<option value="Colorado">Colorado</option>
-						<option value="Connecticut">Connecticut</option>
-						<option value="Delaware">Delaware</option>
-						<option value="District of Columbia">District of Columbia</option>
-						<option value="Florida">Florida</option>
-						<option value="Georgia">Georgia</option>
-						<option value="Guam">Guam</option>
-						<option value="Hawaii">Hawaii</option>
-						<option value="Idaho">Idaho</option>
-						<option value="Illinois">Illinois</option>
-						<option value="Indiana">Indiana</option>
-						<option value="Iowa">Iowa</option>
-						<option value="Kansas">Kansas</option>
-						<option value="Kentucky">Kentucky</option>
-						<option value="Louisiana">Louisiana</option>
-						<option value="Maine">Maine</option>
-						<option value="Maryland">Maryland</option>
-						<option value="Massachusetts">Massachusetts</option>
-						<option value="Michigan">Michigan</option>
-						<option value="Minnesota">Minnesota</option>
-						<option value="Mississippi">Mississippi</option>
-						<option value="Missouri">Missouri</option>
-						<option value="Montana">Montana</option>
-						<option value="Nebraska">Nebraska</option>
-						<option value="Nevada">Nevada</option>
-						<option value="New Hampshire">New Hampshire</option>
-						<option value="New Jersey">New Jersey</option>
-						<option value="New Mexico">New Mexico</option>
-						<option value="New York">New York</option>
-						<option value="North Carolina">North Carolina</option>
-						<option value="North Dakota">North Dakota</option>
-						<option value="Northern Marianas Islands">Northern Marianas Islands</option>
-						<option value="Ohio">Ohio</option>
-						<option value="Oklahoma">Oklahoma</option>
-						<option value="Oregon">Oregon</option>
-						<option value="Pennsylvania">Pennsylvania</option>
-						<option value="Puerto Rico">Puerto Rico</option>
-						<option value="Rhode Island">Rhode Island</option>
-						<option value="South Carolina">South Carolina</option>
-						<option value="South Dakota">South Dakota</option>
-						<option value="Tennessee">Tennessee</option>
-						<option value="Texas">Texas</option>
-						<option value="Utah">Utah</option>
-						<option value="Vermont">Vermont</option>
-						<option value="Virginia">Virginia</option>
-						<option value="Virgin Islands">Virgin Islands</option>
-						<option value="Washington">Washington</option>
-						<option value="West Virginia">West Virginia</option>
-						<option value="Wisconsin">Wisconsin</option>
-						<option value="Wyoming">Wyoming</option>
-                    </select>
-               		</div>
-                  </div>
-                </div>
-                  <div class="row">
-                  <div class="col-xl-6 mb-4" >
-                   <select class="form-select w-100" id="authority" aria-label="Floating label select example">
-						<option selected>I am a...</option>
-						<option value="Patient">Patient</option>
-						<option value="Doctor">Doctor</option>
-					</select>
-                  </div>
-                  <div class="col-xl-6 mb-4">
-                 <select class="form-select w-100" id="gender" aria-label="Floating label select example">
-						<option selected>Gender</option>
-						<option value="Male">Male</option>
-						<option value="Female">Female</option>
-						<option value="Other">Other</option>
-					</select>
-                  </div>
-                </div>
-                 
-                <div class="d-flex justify-content-end pt-3">
-                  <button type="submit" class="btn btn-outline-primary btn-lg ms-2" onclick="register()">Submit form</button>
-                </div>
-              </div>
-              	
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
- 
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.bundle.min.js"></script>
+	</div>
 
 
-    <!-- Additional Scripts -->
-    <script src="/js/owl.js"></script>
-    <script src="/js/accordations.js"></script>
-    <script src="/js/main.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Additional Scripts -->
+	<script src="/js/owl.js"></script>
+	<script src="/js/accordations.js"></script>
+	<script src="/js/main.js"></script>
 	<script type="text/javascript" src="/js/register.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
+	<script type="text/javascript">
+		$(document).ready(function() {
 
-            // navigation click actions 
-            $('.scroll-link').on('click', function(event){
-                event.preventDefault();
-                var sectionID = $(this).attr("data-id");
-                scrollToID('#' + sectionID, 750);
-            });
-            // scroll to top action
-            $('.scroll-top').on('click', function(event) {
-                event.preventDefault();
-                $('html, body').animate({scrollTop:0}, 'slow');         
-            });
-            // mobile nav toggle
-            $('#nav-toggle').on('click', function (event) {
-                event.preventDefault();
-                $('#main-nav').toggleClass("open");
-            });
-        });
-        // scroll function
-        function scrollToID(id, speed){
-            var offSet = 0;
-            var targetOffset = $(id).offset().top - offSet;
-            var mainNav = $('#main-nav');
-            $('html,body').animate({scrollTop:targetOffset}, speed);
-            if (mainNav.hasClass("open")) {
-                mainNav.css("height", "1px").removeClass("in").addClass("collapse");
-                mainNav.removeClass("open");
-            }
-        }
-        if (typeof console === "undefined") {
-            console = {
-                log: function() { }
-            };
-        }
-    </script>
+			// navigation click actions 
+			$('.scroll-link').on('click', function(event) {
+				event.preventDefault();
+				var sectionID = $(this).attr("data-id");
+				scrollToID('#' + sectionID, 750);
+			});
+			// scroll to top action
+			$('.scroll-top').on('click', function(event) {
+				event.preventDefault();
+				$('html, body').animate({
+					scrollTop : 0
+				}, 'slow');
+			});
+			// mobile nav toggle
+			$('#nav-toggle').on('click', function(event) {
+				event.preventDefault();
+				$('#main-nav').toggleClass("open");
+			});
+		});
+		// scroll function
+		function scrollToID(id, speed) {
+			var offSet = 0;
+			var targetOffset = $(id).offset().top - offSet;
+			var mainNav = $('#main-nav');
+			$('html,body').animate({
+				scrollTop : targetOffset
+			}, speed);
+			if (mainNav.hasClass("open")) {
+				mainNav.css("height", "1px").removeClass("in").addClass(
+						"collapse");
+				mainNav.removeClass("open");
+			}
+		}
+		if (typeof console === "undefined") {
+			console = {
+				log : function() {
+				}
+			};
+		}
+	</script>
 
-  </body>
+</body>
 </html>

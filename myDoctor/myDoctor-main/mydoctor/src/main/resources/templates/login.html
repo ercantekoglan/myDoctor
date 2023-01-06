@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="Tooplate">
+
+<title>My Doctors</title>
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- Additional CSS Files -->
+<link rel="stylesheet" href="css/fontawesome.css" type="text/css">
+<link rel="stylesheet" href="/css/tooplate-main.css" type="text/css">
+<link rel="stylesheet" href="/css/owl.css" type="text/css">
+
+</head>
+<body>
+	<div class="slides">
+		<div class="slide" id="4">
+			<div class="content fifth-content">
+
+				<div class="row ">
+					<div class="col-xl-6"></div>
+					<div class="col-xl-6" style="padding-left: 15%; padding-right: 10%; padding-top: 15%;">
+						<div class="card-body p-md-5 text-black">
+					<form class="form-signin" action="#" th:action="@{/login}"	method="post">
+						<!-- use param.error assuming FormLoginConfigurer#failureUrl contains the query parameter error -->
+						<div th:if="${param.error != null}" style="padding-left: 40px">
+							<p style="color: #C83616">Invalid Username or Password!</p>	<br>
+							<div th:if="${SPRING_SECURITY_LAST_EXCEPTION != null}">
+							Reason: <span th:text="${SPRING_SECURITY_LAST_EXCEPTION.message}"></span>
+							</div>
+						</div>
+						<!-- the configured LogoutConfigurer#logoutSuccessUrl is /login?logout and contains the query param logout -->
+						<div th:if="${param.logout != null}">You have been logged out.</div>
+				
+						<div class="form-outline mb-4">
+							<input class="form-control form-control-md" id="username" name="username" type="text" placeholder="Username" />
+						</div>
+						<div class="form-outline mb-4">
+							<input class="form-control form-control-md" type="password" id="password"name="password" placeholder="Password" />
+						</div>
+						<div>
+						<input type="submit" value="SIGN IN">
+						</div>
+				</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Additional Scripts -->
+	<script src="/js/owl.js"></script>
+	<script src="/js/accordations.js"></script>
+	<script src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/register.js"></script>
+
+
+</body>
+</html>

@@ -9,6 +9,36 @@
     opacity: 0;
   }
 }
+
+.btn-outline-light {
+   
+    border: none;
+}
+.btn-outline-light:active {
+  color: blue;
+}
+
+.btn-outline-light:visited {
+  color: purple;
+}
+
+.btn-outline-light:not(:disabled):not(.disabled).active, .btn-outline-light:not(:disabled):not(.disabled):active, .show>.btn-outline-light.dropdown-toggle {
+    color: white;
+    background-color: transparent;
+    border-color: #f8f9fa;
+}
+
+.btn-outline-light:hover {
+    color: white;
+    background-color: transparent;
+    border-color: #3a75af;
+}
+
+.btn-primary:hover {
+    
+    background-color: transparent;
+    
+}
 .seq-preloader {
   background: white;
   visibility: visible;
@@ -180,12 +210,12 @@ nav ul li a {
 
 nav ul {
 	position: relative;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 	text-align: left;
 	list-style-type: none;
-	height: 85%;
+	height: 90%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -234,23 +264,12 @@ nav a::before {
   position: fixed;
  	display: inline-block;
   text-align: center;
-	background-color: #20A0D8;
+	
 	height: 15%;
 	width: 15%;
 }
-.logo h1 {
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: 900;
-  color: #ffffff;
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
-.logo h2 {
-  display: none;
-}
+
+
 .slides {
   width: 500vw;
   height: 100vh;
@@ -307,10 +326,8 @@ nav a::before {
   background-image: url(../images/login-bg.jpg);
   background-position: fixed;
 }
-.slides .slide:nth-child(5) {
-  background-image: url(../images/register-bg.jpg);
-  background-position: fixed;
-}
+
+
 
 /* Slide 1 Stlye */
 #slider-wrapper{
@@ -392,6 +409,14 @@ nav a::before {
   right: 30px;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
+}
+
+.slide-caption1 {
+  text-align: right;
+  right: 30px;
+  position: absolute;
+  top: 8%;
   transform: translateY(-50%);
 }
 .slide-caption h6 {
@@ -598,41 +623,23 @@ nav a::before {
 	transform: translateY(-220%);
 	
   }
-  .logo h1 {
-    display: none;
-  }
-  .logo h2 {
-  	margin-top: 0px;
-    line-height: 100px;
-    height: 100px;
-    width: 15vw;
-    top: 0;
-    left: 0;
-    z-index: 999999;
-    position: fixed;
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: 900;
-    color: #111;
-    display: inline-block;
-    text-align: center;
-    background-color: #20A0D8;
-  }
+
   nav {
     top: 0vh;
     height: 100px;
-    width: 85vw;
-    margin-left: 15vw;
+    width: 100vw;
+   
   }
   nav ul {
     flex-direction: row;
   }
   nav ul li {
     display: inline;
-    margin: 0px;
+    margin: 14px;
   }
   nav ul li img {
-	width: 35%;
+	width: 45%;
+	
   }
   nav ul li em {
     display: none;
@@ -676,6 +683,9 @@ nav a::before {
   }
   .slide-caption {
     padding-left: 30px;
+  }
+    .slide-caption1 {
+    top : 17%;
   }
   #tabs ul li span {
     width: 60px;
