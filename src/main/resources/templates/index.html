@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="Tooplate">
+
+<title>My Doctors</title>
+
+<!-- Bootstrap core CSS -->
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- Additional CSS Files -->
+<link rel="stylesheet" href="css/fontawesome.css" type="text/css">
+<link rel="stylesheet" href="/css/tooplate-main.css" type="text/css">
+<link rel="stylesheet" href="/css/owl.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"  type="text/css">
+</head>
+
+<body>
+<div class="sequence">
+
+		<div class="seq-preloader">
+			<svg width="39" height="16" viewBox="0 0 39 16"
+				xmlns="http://www.w3.org/2000/svg" class="seq-preload-indicator">
+				<g fill="#F96D38">
+				<path class="seq-preload-circle seq-preload-circle-1"
+					d="M3.999 12.012c2.209 0 3.999-1.791 3.999-3.999s-1.79-3.999-3.999-3.999-3.999 1.791-3.999 3.999 1.79 3.999 3.999 3.999z" />
+				<path class="seq-preload-circle seq-preload-circle-2"
+					d="M15.996 13.468c3.018 0 5.465-2.447 5.465-5.466 0-3.018-2.447-5.465-5.465-5.465-3.019 0-5.466 2.447-5.466 5.465 0 3.019 2.447 5.466 5.466 5.466z" />
+				<path class="seq-preload-circle seq-preload-circle-3"
+					d="M31.322 15.334c4.049 0 7.332-3.282 7.332-7.332 0-4.049-3.282-7.332-7.332-7.332s-7.332 3.283-7.332 7.332c0 4.05 3.283 7.332 7.332 7.332z" /></g></svg>
+		</div>
+</div>
+
+	<nav>
+
+		<ul>
+			<li><img class="img-fluid" src="/images/logo.png" alt=""></li>
+			<li><a href="#1"><img src="/images/icon-1.png" alt=""><em>Home Page</em></a></li>
+			<li><a href="#2"><img src="/images/icon-3.png" alt=""><em>Departments</em></a></li>
+			<li><a href="#3"><img src="/images/icon-2.png" alt=""><em>Doctors</em></a></li>
+			<li><button type="button" class="btn btn-outline-light " onclick="login()"><img class = "image- fluid mb-2" src="/images/icon-4.png" alt=""><br>Log In</button></li>
+  			<li><button type="button" class="btn btn-outline-light " onclick="goregister()"><img class = "image- fluid mb-2" src="/images/icon-5.png" alt=""><br>Register</button></li>
+
+
+		</ul>
+	</nav>
+
+
+	<div class="slides">
+		<div class="slide" id="1">
+			<div id="slider-wrapper">
+				<div id="image-slider">
+					<ul>
+						<li class="active-img">
+						
+							<div class="slide-caption">
+								<h6>Care For</h6>
+								<h2>
+									Yourself<br> and<br>Your Family
+								</h2>
+
+							</div>
+						</li>
+						<li>
+							<div class="slide-caption">
+								<h6>Latest One</h6>
+								<h2>
+									Tech<br>Meeting
+								</h2>
+							</div>
+						</li>
+						<li>
+							<div class="slide-caption">
+								<h6>Your Update</h6>
+								<h2>
+									Smart<br>Devices
+								</h2>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="thumbnail">
+					<ul>
+						<li class="active"><img src="/images/thumb-01.png"
+							alt="About Us" /></li>
+						<li><img src="/images/thumb-02.png" alt="Services" /></li>
+						<li><img src="/images/thumb-03.jpg" alt="Careers" /></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="slide" id="2">
+			<div class="content second-content">
+				<section id="services" class="services" style="width: 70%;"> 
+      <div class="container">
+
+        <div class="section-title">
+          <h1>Services</h1>
+          <br> <br>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="fa fa-heartbeat"></i></div>
+              <h4><a href="">Emergency</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-pills"></i></div>
+              <h4><a href="">Pill Support</a></h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fa fa-hospital-user"></i></div>
+              <h4><a href="">High Quality</a></h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-dna"></i></div>
+              <h4><a href="">High Tech Labs</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fa fa-wheelchair"></i></div>
+              <h4><a href="">Experienced Staffs</a></h4>
+              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fa fa-notes-medical"></i></div>
+              <h4><a href="">All Kind Medicare</a></h4>
+              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+			</div>
+		</div>
+		<div class="slide" id="3">
+			<div class="content third-content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="owl-carousel owl-theme">
+							<div class="col-md-12">
+								<div class="featured-item" th:each="user : ${users}">
+									<a href=""><img src="images/item-01.jpg" alt=""></a>
+									<div class="down-content">
+										<h4 th:text="${user.firstName}"></h4>
+										<h6 th:text="${user.username}">School Name</h6>
+										<h6 th:text="${user.firstName}">Field</h6>
+										<h6 th:text="${user.firstName}">Minor</h6>
+										<h6 th:text="${user.firstName}">Graduation Date</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Additional Scripts -->
+	<script src="/js/owl.js"></script>
+	<script src="/js/accordations.js"></script>
+	<script src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/register.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			// navigation click actions 
+			$('.scroll-link').on('click', function(event) {
+				event.preventDefault();
+				var sectionID = $(this).attr("data-id");
+				scrollToID('#' + sectionID, 750);
+			});
+			// scroll to top action
+			$('.scroll-top').on('click', function(event) {
+				event.preventDefault();
+				$('html, body').animate({
+					scrollTop : 0
+				}, 'slow');
+			});
+			// mobile nav toggle
+			$('#nav-toggle').on('click', function(event) {
+				event.preventDefault();
+				$('#main-nav').toggleClass("open");
+			});
+		});
+		// scroll function
+		function scrollToID(id, speed) {
+			var offSet = 0;
+			var targetOffset = $(id).offset().top - offSet;
+			var mainNav = $('#main-nav');
+			$('html,body').animate({
+				scrollTop : targetOffset
+			}, speed);
+			if (mainNav.hasClass("open")) {
+				mainNav.css("height", "1px").removeClass("in").addClass(
+						"collapse");
+				mainNav.removeClass("open");
+			}
+		}
+		if (typeof console === "undefined") {
+			console = {
+				log : function() {
+				}
+			};
+		}
+	</script>
+
+</body>
+</html>
